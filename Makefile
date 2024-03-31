@@ -27,3 +27,7 @@ output/histogram.png: code/05_histogram.R output/data_clean.rds
 .PHONY: clean 
 clean: 
 	rm -f output/*.rds && rm -f output/*.png && rm -f report.html
+	
+.PHONY: install
+install: 
+	Rscript -e "renv::restore(prompt = FALSE)"
