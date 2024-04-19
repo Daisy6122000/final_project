@@ -55,9 +55,47 @@ This report contains study background, objectives, descriptive analysis (Table 1
 `renv.lock`
 
   - is the project specific library
-  - after cloning my repository, use "setwd()" to set the current working directory to this project's working directory
+  - after cloning my repository, in the Console, use `setwd()` to set your working directory in R to your project directory.
+Run `renv::init()` to initialize a project library.
   - enter "renv::activate()" in R console to activate the project library
   - renv::restore()" to synchronize a project library with renv.lock
   - " renv::status()" to check the status of the project library
+
+
+## Link to the image on DockerHub
+https://hub.docker.com/repository/docker/daisy612/final_project/general
+
+
+## Building the image
+
+1. run `docker pull daisy612/final_project` to pull the docker image in your computer
+2. when you check your images (run `docker image ls`), you will see my image "daisy612/final_project", which means you successfully build the image
+
+
+## Running the automated version of the image
+
+I did my development at the command line `r-ubuntu`,
+
+  - run `docker run -v "$(pwd)"/final_report:/project/final_report daisy612/final_project` to build the report automatically by running the container with the default configuration.
+
+  - run `docker run -e WHICH_CONFIG=test -v "$(pwd)"/final_report:/project/final_report daisy612/final_project` to build the report automatically with the test configuration
+
+
+If you are using git bash on Windows, you will need an extra `/`
+
+  - run `docker run -v "/$(pwd)"/final_report:/project/final_report daisy612/final_project` to build the report automatically by running the container with the default configuration.
+
+  - run `docker run -e WHICH_CONFIG=test -v "/$(pwd)"/final_report:/project/final_report daisy612/final_project` to build the report automatically with the test configuration
+
+
+
+
+
+
+
+
+
+
+
 
 

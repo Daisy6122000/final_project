@@ -5,6 +5,7 @@ data <- readRDS(
 )
 
 library(gtsummary)
+library(car)
 
 table_one <- data |>
   select("age", "gender", "cp", "trestbps", "chol", "fbs1", "restecg", "thalach", 
