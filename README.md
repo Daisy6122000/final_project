@@ -55,11 +55,6 @@ This report contains study background, objectives, descriptive analysis (Table 1
 `renv.lock`
 
   - is the project specific library
-  - after cloning my repository, in the Console, use `setwd()` to set your working directory in R to your project directory.
-Run `renv::init()` to initialize a project library.
-  - enter "renv::activate()" in R console to activate the project library
-  - renv::restore()" to synchronize a project library with renv.lock
-  - " renv::status()" to check the status of the project library
 
 
 ## Link to the image on DockerHub
