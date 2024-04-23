@@ -51,5 +51,5 @@ docker_image: $(PROJECTFILES) $(RENVFILES) Dockerfile
 	touch $@
 
 # Running a container
-report/report.html:
-	docker run -v "/$(pwd)"/final_report:/project/final_report final_project || docker run -v "$(pwd)"/final_report:/project/final_report daisy612/final_project
+final_report/report.html:
+	docker run -v "/$$(pwd)"/final_report:/project/final_report final_project || docker run -v "$$(pwd)"/final_report:/project/final_report daisy612/final_project

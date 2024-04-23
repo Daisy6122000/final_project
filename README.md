@@ -34,12 +34,14 @@ Build docker image locally: run `make docker_image`
 
 I did my development at the command line `r-ubuntu`,
 
+If you are using git bash on __Mac__,
+
   - run `docker run -v "$(pwd)"/final_report:/project/final_report daisy612/final_project` to build the report automatically by running the container with the default configuration.
 
   - run `docker run -e WHICH_CONFIG=test -v "$(pwd)"/final_report:/project/final_report daisy612/final_project` to build the report automatically with the test configuration
 
 
-If you are using git bash on Windows, you will need an extra `/`
+If you are using git bash on __Windows__, you will need an extra `/`
 
   - run `docker run -v "/$(pwd)"/final_report:/project/final_report daisy612/final_project` to build the report automatically by running the container with the default configuration.
 
